@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deposite Funds
+{% endblock %}
+
+{% block main %}
+   <form action="/add_cash" method="post">
+       <div class="form-group">
+
+           <input autocomplete="off" class="form-control" placeholder="Deposite Amount"  name="cash" type="number" min="1">
+
+       </div>
+       <button class="btn btn-primary" type="submit">Deposite</button>
+
+
+
+   </form>
+
+
+
+
+
+{% endblock %}
