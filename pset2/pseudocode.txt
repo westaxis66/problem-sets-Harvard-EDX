@@ -1,0 +1,25 @@
+
+#include <cs50.h>
+#include <stdio.h>
+
+#include <string.h>
+
+int main(void)
+
+{
+    string text = get_string("Text; ");//Your program must prompt the user for a string of text (using get_string).
+
+    printf("Text:, text");
+
+}
+#include <cs50.h>
+
+#include <stdio.h>
+
+#include <string.h>
+
+#include <math.h>
+
+#include <ctype.h>
+
+
