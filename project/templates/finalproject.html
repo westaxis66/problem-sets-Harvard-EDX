@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/finalprojectcss.css" rel="stylesheet">
+
+
+  </head>
+
+
+  <body>
+    <h1>BBT Web Design and Development</h1>
+
+
+
+      <div class="row">
+      <div class="column" style="background-color:#ccddff;">
+        <h2>BBT Mission Statement</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <h2>Maketing Information</h2>
+        <p>Some text..</p>
+      </div>
+      </div>
+
+      <div>
+        <h2>Register With Us</h2>
+        <p class="p_p">Click on the "Register" button to open the registration form.</p>
+      <div class="openBtn ">
+        <button class="openButton" onclick="openForm()"><strong>Register</strong></button>
+      </div>
+      <div class="Popup">
+      <div class="formPopup" id="popupForm">
+        <form action="/" class="formContainer" method="post">
+          <h2>Please Register</h2>
+          <label for="name">
+            <strong>Name</strong>
+          </label>
+          <input type="text" id="name" placeholder="Your Name" name="name" required>
+
+          <label for="email">
+            <strong>E-mail</strong>
+          </label>
+          <input type="email" id="email" placeholder="Your Email" name="email" required>
+
+
+          <button type="submit" class="btn">Submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+        </form>
+      </div>
+      <div class="formPopup" name="sform" id="SForm">
+        <form action="/" class="formContainer" method="post">
+          <h2>Thank you for registering</h2>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      <!--message flash for after email registration-->
+      <h1 class="flashes" style="color: green"><u><b>
+    {% for message in get_flashed_messages()%}
+       {{ message|safe }}
+     {% endfor %}
+         </b></u>
+    </h1>
+
+      <script>
+      function openForm() {
+        document.getElementById("popupForm").style.display = "block";
+      }
+      function closeForm() {
+        document.getElementById("popupForm").style.display = "none";
+      }
+
+      </script>
+
+
+    <div id="end">
+      <footer>
+        <nav>
+            <ul>
+              <li>
+
+
+                    <a href="/contact" style="color: black">Contact Us</a>
+                </li>
+                <li>
+                    <a href="/examples" style="color: black">Examples</a>
+                </li>
+                <li>
+                    <a href="/otherstuff" style="color: black">About Us</a>
+                 </li>
+
+            </ul>
+        </nav>
+
+      </footer>
+      </div>
+  </body>
+</html>
+
+
+<!--<h2>Popup Form</h2>
+    <p>Click on the "Open Form" button to open the popup form.</p>
+    <div class="openBtn">
+      <button class="openButton" onclick="openForm()"><strong>Open Form</strong></button>
+    </div>
+    <div class="loginPopup">
+      <div class="formPopup" id="popupForm">
+        <form action="/action_page.php" class="formContainer">
+          <h2>Please Log in</h2>
+          <label for="email">
+            <strong>E-mail</strong>
+          </label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label for="psw">
+            <strong>Password</strong>
+          </label>
+          <input type="password" id="psw" placeholder="Your Password" name="psw" required>
+          <button type="submit" class="btn">Log in</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          <!--<input autocomplete="off" name="email" placeholder="Email" type="email">-->
+       <!-- </form>
+      </div>
+    </div>-->
