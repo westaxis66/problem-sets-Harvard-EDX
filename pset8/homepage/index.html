@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+        <title>My Webpage</title>
+
+        <script>
+            alert ("This is your entry into the tribes site");
+
+            var person = prompt("Please enter your name", "Harry Potter");
+
+            if (person == null || person == "") {
+              txt = "User cancelled the prompt.";
+            } else {
+              txt = "Hello " + person + "! How are you today?";
+            }
+
+
+            let counter = 0;
+
+            function increment()
+            {
+                counter++;
+                document.querySelector('#result').innerHTML = counter;
+            }
+        </script>
+
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+    </head>
+
+    <body>
+
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+
+    <div id="logo">
+        <h1>Blue Black Tribe Web Design & Development</h1>
+    </div>
+
+    <div class="box" style="width: 630px; float: left; height:400px; background: #99d6ff; margin:40px">
+        <h2>This Is A Header</h2>
+        <p class="text">this is the firts paragraph</p>
+
+        <form action="https://www.google.com/search" method="get">
+            <input name="q" type="text">
+            <input type="submit" value="Submit Form">
+        </form>
+        <form onsubmit="increment(); return false;">
+            <input type="text" id="name">
+            <input type="submit">
+        </form>
+        <div id='result'>
+            0
+        </div>
+
+    </div>
+
+    <div class="box" style="width: 630px; float: right; height: 400px; background: #99d6ff; margin:40px">
+        <h2>This Is A Header</h2>
+        <p class="text">this is the second paragraph</p>
+
+        <button id = 'red'>R</button>
+        <button id = 'green'>G</button>
+        <button id = 'blue'>B</button>
+
+         <script>
+            let body = document.querySelector('body');
+            document.querySelector('#red').onclick = function()
+            {
+                body.style.backgroundColor = 'red';
+            }
+            document.querySelector('#green').onclick = function()
+            {
+                body.style.backgroundColor = 'green';
+            }
+            document.querySelector('#blue').onclick = function()
+            {
+                body.style.backgroundColor = 'blue';
+            }
+        </script>
+        <select>
+            <option value = "large">Large Text</option>
+            <option value = "initial" selected>Medium Text</option>
+            <option value = "small">Small Text</option>
+        </select>
+         <script>
+             document.querySelector('select').onchange = function()
+             {
+                 document.querySelector('p').style.fontSize = this.value;
+             }
+         </script>
+         <table>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+            </tr>
+            <tr>
+                <td>cell 4</td>
+                <td>cell 5</td>
+                <td>cell 6</td>
+            </tr>
+        </table>
+        <script>
+            navigator.geolocation.getCurrentPosition(function(position)
+            {
+                document.write(position.coords.latitude + ', ' + position.coords.longitude);
+            });
+        </script>
+
+    </div>
+
+    <div id="end">
+    <footer>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href= "contact.html" style="color: black">Contact Us</a>
+                </li>
+                <li>
+                    <a href="examples.html" style="color: black">Examples</a>
+                </li>
+                <li>
+                    <a href="otherstuff.html" style="color: black">Other Stuff</a>
+                 </li>
+
+            </ul>
+        </nav>
+
+    </footer>
+    </div>
+
+
+    </body>
+</html>
