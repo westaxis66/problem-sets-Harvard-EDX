@@ -1,0 +1,50 @@
+#include <cs50.h>
+
+#include <stdio.h>
+
+int main(void)
+
+//  user inputs a height, progam then outputs hastags of equal hight and width oriented to the right
+// invalid integer input will direct user to input a valid integer then reprompt
+// prompt for input, make sure height is in a valid range between 1 and 8 if invalid repromt loop
+
+// Prompt user for height //get int
+
+//If height is less than 1 or greater than 8 (or not an integer at all), go back one step
+//Iterate from 1 through 8 for height:
+//On iteration i, print i hashes and then a newline
+
+
+ int h; //declares a variable
+ do
+
+ {
+ // something happens n= get_int ("height; ");
+ }
+   while ( condition) n<0 || n>8
+
+      //for loop ( initilization; condition; update ) //for (int i = 0; i < n; i++)
+   {
+   // code to repeat // for (int j = 0; j < n; j++) // nested loop
+   }
+   // print number of hashes
+// print number of new line  //printf ()
+
+//right alighn with spaces
+// number of space determined by height int coloms
+       //for ( int s = 0; s < h - r; s++ )
+
+ #include <cs50.h>
+
+#include <stdio.h>
+
+#include <string.h>
+
+int main(void)
+
+{
+    string text = get_string("Text; ");//Your program must prompt the user for a string of text (using get_string).
+
+    printf("Test: %s\n");
+
+}
